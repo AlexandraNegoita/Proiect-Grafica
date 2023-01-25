@@ -1,0 +1,15 @@
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  esUtil_win.cpp
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(53,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(54,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(62,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(63,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(71,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(72,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(81,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(82,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(90,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(91,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(99,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\Utilities\esUtil_win.cpp(100,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Utilities.vcxproj -> C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\BIN-Nvidia\Utilities.lib

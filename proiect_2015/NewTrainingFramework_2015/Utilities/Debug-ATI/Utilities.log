@@ -1,0 +1,32 @@
+﻿Build started 6/14/2015 3:14:37 PM.
+     1>Project "C:\Users\Irina\Desktop\training\NewIntership_23_05_2013_v2\NewIntership_23_05_2013\NewTrainingFramework\Utilities\Utilities.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Debug-ATI\Utilities.lastbuildstate".
+       InitializeBuildStatus:
+         Creating "Debug-ATI\Utilities.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Users\Irina\Desktop\training\NewIntership_23_05_2013_v2\NewIntership_23_05_2013\NewTrainingFramework\\Include\ATI /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug-ATI\Utilities.pch" /Fo"Debug-ATI\\" /Fd"Debug-ATI\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Users\Irina\Desktop\training\NewIntership_23_05_2013_v2\NewIntership_23_05_2013\NewTrainingFramework\\Include\ATI /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug-ATI\Utilities.pch" /Fo"Debug-ATI\\" /Fd"Debug-ATI\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt esShader.cpp esUtil.cpp esUtil_win.cpp Math.cpp TGA.cpp
+         TGA.cpp
+         Math.cpp
+         esUtil_win.cpp
+         esUtil.cpp
+         esShader.cpp
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"C:\Users\Irina\Desktop\training\NewIntership_23_05_2013_v2\NewIntership_23_05_2013\NewTrainingFramework\BIN-ATI\Utilities.lib" /NOLOGO "Debug-ATI\esShader.obj"
+         "Debug-ATI\esUtil.obj"
+         "Debug-ATI\esUtil_win.obj"
+         "Debug-ATI\Math.obj"
+         "Debug-ATI\stdafx.obj"
+         "Debug-ATI\TGA.obj"
+         Utilities.vcxproj -> C:\Users\Irina\Desktop\training\NewIntership_23_05_2013_v2\NewIntership_23_05_2013\NewTrainingFramework\BIN-ATI\Utilities.lib
+       FinalizeBuildStatus:
+         Deleting file "Debug-ATI\Utilities.unsuccessfulbuild".
+         Touching "Debug-ATI\Utilities.lastbuildstate".
+     1>Done Building Project "C:\Users\Irina\Desktop\training\NewIntership_23_05_2013_v2\NewIntership_23_05_2013\NewTrainingFramework\Utilities\Utilities.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.53

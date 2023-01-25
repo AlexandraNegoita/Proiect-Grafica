@@ -1,0 +1,3 @@
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  ResourceManager.cpp
+C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\ResourceManager.cpp(13,6): error C2653: 'Singleton': is not a class or namespace name

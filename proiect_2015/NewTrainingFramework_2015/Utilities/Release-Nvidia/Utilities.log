@@ -1,0 +1,36 @@
+﻿Build started 10/23/2016 10:03:43 PM.
+     1>Project "C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\Utilities\Utilities.vcxproj" on node 2 (Rebuild target(s)).
+     1>PrepareForBuild:
+         Creating directory "Release-Nvidia\Utilities.tlog\".
+       InitializeBuildStatus:
+         Creating "Release-Nvidia\Utilities.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IC:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\Include\Nvidia /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Release-Nvidia\Utilities.pch" /Fo"Release-Nvidia\\" /Fd"Release-Nvidia\Utilities.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IC:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\Include\Nvidia /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _LIB /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Release-Nvidia\Utilities.pch" /Fo"Release-Nvidia\\" /Fd"Release-Nvidia\Utilities.pdb" /Gd /TP /analyze- /errorReport:prompt esShader.cpp esUtil.cpp esUtil_win.cpp Math.cpp TGA.cpp
+         esShader.cpp
+         esUtil.cpp
+         esUtil_win.cpp
+         Math.cpp
+     1>Math.cpp(10): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+     1>Math.cpp(104): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+     1>Math.cpp(208): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+         TGA.cpp
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1357,5): warning MSB8012: TargetPath(C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\BIN-Nvidia\Utilities.lib) does not match the Library's OutputFile property value (C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\BIN-Nvidia\UtilitiesR.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1359,5): warning MSB8012: TargetName(Utilities) does not match the Library's OutputFile property value (UtilitiesR). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\BIN-Nvidia\UtilitiesR.lib" /NOLOGO /LTCG "Release-Nvidia\esShader.obj"
+         "Release-Nvidia\esUtil.obj"
+         "Release-Nvidia\esUtil_win.obj"
+         "Release-Nvidia\Math.obj"
+         "Release-Nvidia\stdafx.obj"
+         "Release-Nvidia\TGA.obj"
+         Utilities.vcxproj -> C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\BIN-Nvidia\Utilities.lib
+       FinalizeBuildStatus:
+         Deleting file "Release-Nvidia\Utilities.tlog\unsuccessfulbuild".
+         Touching "Release-Nvidia\Utilities.tlog\Utilities.lastbuildstate".
+     1>Done Building Project "C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\Utilities\Utilities.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.99

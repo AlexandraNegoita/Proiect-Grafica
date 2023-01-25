@@ -1,0 +1,30 @@
+﻿Build started 10/23/2016 10:03:44 PM.
+     1>Project "C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\NewTrainingFramework\NewTrainingFramework.vcxproj" on node 2 (Rebuild target(s)).
+     1>PrepareForBuild:
+         Creating directory "Release-Nvidia\NewTrain.FC024EC8.tlog\".
+       InitializeBuildStatus:
+         Creating "Release-Nvidia\NewTrain.FC024EC8.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IC:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\Include\Nvidia /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Release-Nvidia\NewTrainingFramework.pch" /Fo"Release-Nvidia\\" /Fd"Release-Nvidia\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IC:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\Include\Nvidia /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Release-Nvidia\NewTrainingFramework.pch" /Fo"Release-Nvidia\\" /Fd"Release-Nvidia\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt NewTrainingFramework.cpp Shaders.cpp
+         NewTrainingFramework.cpp
+         Shaders.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\BIN-Nvidia\NewTrainingFramework.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\Lib\Nvidia libEGL.lib libGLESv2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\BIN-Nvidia\NewTrainingFramework.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\BIN-Nvidia\NewTrainingFramework.lib" /MACHINE:X86 /SAFESEH "Release-Nvidia\NewTrainingFramework.obj"
+         "Release-Nvidia\Shaders.obj"
+         "Release-Nvidia\stdafx.obj"
+         "C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\BIN-Nvidia\UtilitiesR.lib"
+         Generating code
+         All 33 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         Finished generating code
+         NewTrainingFramework.vcxproj -> C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\BIN-Nvidia\NewTrainingFramework.exe
+         NewTrainingFramework.vcxproj -> C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\\BIN-Nvidia\NewTrainingFramework.pdb (Full PDB)
+       FinalizeBuildStatus:
+         Deleting file "Release-Nvidia\NewTrain.FC024EC8.tlog\unsuccessfulbuild".
+         Touching "Release-Nvidia\NewTrain.FC024EC8.tlog\NewTrainingFramework.lastbuildstate".
+     1>Done Building Project "C:\Users\Poli\Desktop\NewIntership_23_05_2013\NewTrainingFramework\NewTrainingFramework\NewTrainingFramework.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.00
