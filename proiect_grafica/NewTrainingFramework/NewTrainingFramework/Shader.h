@@ -2,10 +2,11 @@
 #include "ResourceManager.h"
 
 class Shader {
+	GLuint program, vertexShader, fragmentShader;
 	ResourceManager::ShaderResource* sr;
 	int sId;
 	Shader(ResourceManager::ShaderResource* sr);
-	void Init();
+	int Init();
 	void Load();
-	~Model();
+	~Shader();
 };

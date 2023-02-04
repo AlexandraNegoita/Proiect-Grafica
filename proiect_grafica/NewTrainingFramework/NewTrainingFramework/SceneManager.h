@@ -15,6 +15,7 @@ public:
 	void Update();
 	void freeResources();
 
+	char* gameName;
 	struct defaultScreenSize {
 		int width;
 		int height;
@@ -32,7 +33,7 @@ public:
 	int activeCamera;
 	std::map<int, SceneObject> objects;
 	//std::map<int, Light> lights;
-	void parseSceneManagerXML(char* path);
+	void parseSceneManagerXML();
 
 	~SceneManager();
 };
