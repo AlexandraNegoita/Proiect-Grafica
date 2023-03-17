@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceManager>
+	<models>
+		<folder path="Resources/Models/">
+			<model id="1">
+				<file>Croco.nfg</file>
+			</model>
+			<model id="5">
+				<file>Bila.nfg</file>
+			</model>
+		</folder>
+
+		<!-- un tag folder doar specifica folderul comun pentru un grup de modele (pot sa le am in mai multe foldere)
+		<folder path="Resources/Models2/">
+			<model id="1001">
+				<file>altceva.nfg</file>
+			</model>
+		</folder>
+		-->
+		<!-- si aici se adauga toate modelele necesare -->
+	</models>
+	<shaders>
+		<folder path="Resources/Shaders/">
+			<shader id="10">
+				<vs>modelShader.vs</vs>
+				<fs>modelShader.fs</fs>
+			</shader>
+			<!-- <shader id="3">
+				<vs>terrainShader.vs</vs>
+				<fs>terrainShader.fs</fs>
+			</shader> -->
+		<!-- si aici se adauga toate shaderele -->
+		</folder>
+		
+	</shaders>
+	<textures>
+		<folder path="Resources/Textures/">
+			<texture id="4" type="2d">
+				<file>croco.tga</file>			
+				<min_filter>LINEAR</min_filter>
+				<mag_filter>LINEAR</mag_filter>
+				<wrap_s>CLAMP_TO_EDGE</wrap_s>
+				<wrap_t>CLAMP_TO_EDGE</wrap_t>
+			</texture>
+			<texture id="14" type="2d">
+				<file>dirt.tga</file>			
+				<min_filter>LINEAR</min_filter>
+				<mag_filter>LINEAR</mag_filter>
+				<wrap_s>CLAMP_TO_EDGE</wrap_s>
+				<wrap_t>CLAMP_TO_EDGE</wrap_t>
+			</texture>
+			<texture id="15" type="2d">
+				<file>rock.tga</file>			
+				<min_filter>LINEAR</min_filter>
+				<mag_filter>LINEAR</mag_filter>
+				<wrap_s>CLAMP_TO_EDGE</wrap_s>
+				<wrap_t>CLAMP_TO_EDGE</wrap_t>
+			</texture>		
+			<texture id="5" type="2d">
+				<file>bus.tga</file>
+				<min_filter>LINEAR</min_filter>
+				<mag_filter>LINEAR</mag_filter>
+				<wrap_s>CLAMP_TO_EDGE</wrap_s>
+				<wrap_t>CLAMP_TO_EDGE</wrap_t>
+			</texture>
+			<!-- si aici se adauga toate texturile -->
+		</folder>
+	</textures>	
+</resourceManager>
