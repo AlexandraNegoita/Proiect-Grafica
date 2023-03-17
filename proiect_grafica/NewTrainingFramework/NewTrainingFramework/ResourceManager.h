@@ -40,7 +40,7 @@ public:
 	TextureResource* loadTexture(int textureId);
 	ShaderResource* loadShader(int shaderId);
 
-	void parseResourceManagerXML(char* path);
+	void parseResourceManagerXML();
 
 	void freeResources();
 	~ResourceManager();

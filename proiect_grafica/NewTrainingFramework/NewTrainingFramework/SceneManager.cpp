@@ -34,22 +34,29 @@ void SceneManager::Init() {
     // Iterate over the map using Iterator till end.
     while (objectsIt != objects.end())
     {
-        //// Accessing KEY from element pointed by it.
-        //std::string word = it->first;
-        //// Accessing VALUE from element pointed by it.
-        //int count = it->second;
-        //std::cout << word << " :: " << count << std::endl;
-        //// Increment the Iterator to point to next entry
         (objectsIt->second).Init();
         objectsIt++;
     }
 }
 void SceneManager::Draw() {
-	
+    std::map<std::string, int>::iterator objectsIt = objects.begin();
+    // Iterate over the map using Iterator till end.
+    while (objectsIt != objects.end())
+    {
+        (objectsIt->second).Init();
+        objectsIt++;
+    }
 
 }
 void SceneManager::Update() {
-	
+    SceneManager::parseSceneManagerXML(SceneManager::XMLpath);
+    std::map<std::string, int>::iterator objectsIt = objects.begin();
+    // Iterate over the map using Iterator till end.
+    while (objectsIt != objects.end())
+    {
+        (objectsIt->second).Init();
+        objectsIt++;
+    }
 
 }
 
@@ -57,15 +64,18 @@ void SceneManager::freeResources() {
 	delete spInstance;
 }
 
-void SceneManager::parseSceneManagerXML(char* path) {
+void SceneManager::parseSceneManagerXML() {
     xml_document<> doc;
-    std::ifstream file(path);
+    std::ifstream file("Managers/sceneManager.xml");
     std::stringstream buffer;
     buffer << file.rdbuf();
     file.close();
     std::string content(buffer.str());
     doc.parse<0>(&content[0]);
     xml_node<>* sceneManagerNode = doc.first_node();
+
+    //gameName
+    SceneManager::gameName = sceneManagerNode->first_node("gameName")->value();
 
     //defaultScreenSize
     xml_node<>* defaultScreenSizeNode = sceneManagerNode->first_node("defaultScreenSize");
@@ -176,6 +186,6 @@ void SceneManager::parseSceneManagerXML(char* path) {
     }
 }
 
-//void SceneManager::metodaInstanta() {
-//	//nitel cod
-//}
+SceneManager::~SceneManager()
+{
+}

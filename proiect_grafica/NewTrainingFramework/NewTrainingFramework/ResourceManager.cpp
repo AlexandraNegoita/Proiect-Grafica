@@ -28,9 +28,9 @@ void ResourceManager :: Init() {
 	spInstance = new ResourceManager();
 }
 
-void ResourceManager::loadXML(char* path) {
+void ResourceManager::loadXML() {
     xml_document<> doc;
-    std::ifstream file(path);
+    std::ifstream file("Managers/resourceManager.xml");
     std::stringstream buffer;
     buffer << file.rdbuf();
     file.close();
@@ -136,9 +136,9 @@ Shader* ResourceManager::loadShader(int shaderId) {
     }
 }
 
-void ResourceManager::parseResourceManagerXML(char* path) {
+void ResourceManager::parseResourceManagerXML() {
     xml_document<> doc;
-    std::ifstream file(path);
+    std::ifstream file("Managers/resourceManager.xml");
     std::stringstream buffer;
     buffer << file.rdbuf();
     file.close();
@@ -207,5 +207,9 @@ void ResourceManager::parseResourceManagerXML(char* path) {
 
 void ResourceManager::freeResources() {
 	delete spInstance;
+}
+
+ResourceManager::~ResourceManager()
+{
 }
 
