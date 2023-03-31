@@ -4,6 +4,10 @@
 #include "Globals.h"
 
 
+Camera::Camera()
+{
+}
+
 Camera :: Camera(Vector3 position, Vector3 target, Vector3 up) {
 	this->position = position;
 	this->target = target;
@@ -25,6 +29,13 @@ Camera :: Camera(Vector3 position, Vector3 target, Vector3 up, GLfloat translati
 	this->farC = farC;
 	this->fov = fov;
 };
+
+char* Camera::getType() {
+	return this->type;
+}
+void Camera::setType(char* type) {
+	this->type = type;
+}
 
 Vector3 Camera :: getPosition() {
 	return this->position;

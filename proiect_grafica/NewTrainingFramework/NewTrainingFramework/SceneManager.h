@@ -2,6 +2,7 @@
 #include "Camera.h"
 #include "Control.h"
 #include "SceneObject.h"
+#include <string>
 #include <map>
 class SceneManager {
 private:
@@ -10,28 +11,29 @@ private:
 public:
 	static SceneManager* getInstance();
 	char* XMLpath;
-	void Init();
+	int Init();
 	void Draw();
 	void Update();
 	void freeResources();
 
-	char* gameName;
+	std::string gameName;
 	struct defaultScreenSize {
 		int width;
 		int height;
 		bool isFullscreen;
 	};
-
+	defaultScreenSize dss;
 	struct backgroundColor {
 		float r;
 		float g;
 		float b;
 	};
+	backgroundColor bc;
 
 	std::map<int, Camera> cameras;
-	Control* controls;
+	Control* controls[100];
 	int activeCamera;
-	std::map<int, SceneObject> objects;
+	std::map<int, SceneObject*> objects;
 	//std::map<int, Light> lights;
 	void parseSceneManagerXML();
 

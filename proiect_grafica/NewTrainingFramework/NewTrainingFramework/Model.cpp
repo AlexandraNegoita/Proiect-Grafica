@@ -4,14 +4,14 @@
 #include <fstream>
 #include "../Utilities/utilities.h"
 
-Model::Model(ResourceManager::ModelResource* mr) {
+Model::Model(ModelResource *mr) {
 	this->mr = mr;
 }
 
 void Model::Load() {
 	FILE* modelFile;
 
-	modelFile = fopen(strcat(Model::mr->path,Model::mr->file), "r");
+	modelFile = fopen(Model::mr->file_path, "r");
 	char* line = (char*)malloc(sizeof(char) * 1000);
 	fgets(line, 1000, modelFile);
 	int nrVerticesCpy;

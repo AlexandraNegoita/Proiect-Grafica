@@ -1,11 +1,24 @@
 #pragma once
-#include "ResourceManager.h"
+#include "../Utilities/utilities.h"
+#include "Resources.h"
 
 class Shader {
+public:
+	static std::map<int, Shader*> loadedShaders;
 	GLuint program, vertexShader, fragmentShader;
-	ResourceManager::ShaderResource* sr;
+	GLint positionAttribute;
+	GLint normAttribute;
+	GLint binormAttribute;
+	GLint tgtAttribute;
+	GLint uvAttribute;
+	GLint viewUniform;
+	GLint textureUniform;
+	GLint perspectiveUniform;
+	GLint colorAttribute;
+	GLint matrixUniform;
+	ShaderResource* sr;
 	int sId;
-	Shader(ResourceManager::ShaderResource* sr);
+	Shader(ShaderResource* sr);
 	int Init();
 	void Load();
 	~Shader();

@@ -4,9 +4,10 @@
 
 
 class Control {
-	char key;
+public:
+	char* key;
 	char* action;
-	void trigger();
-	Control();
+	Control(char* key, char* action);
+	void trigger(Camera camera);
 	~Control();
 };

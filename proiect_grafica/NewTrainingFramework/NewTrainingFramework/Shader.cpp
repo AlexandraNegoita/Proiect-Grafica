@@ -1,21 +1,21 @@
 #include <stdafx.h>
 #include "Shader.h"
-#include "ResourceManager.h"
+#include "Resources.h"
 
 
-Shader::Shader(ResourceManager::ShaderResource *sr) {
+Shader::Shader(ShaderResource* sr) {
 	this->sr = sr;
 }
 
 int Shader::Init()
 {
 
-	vertexShader = esLoadShader(GL_VERTEX_SHADER, sr->vs);
+	vertexShader = esLoadShader(GL_VERTEX_SHADER, Shader::sr->vs_path);
 
 	if (vertexShader == 0)
 		return -1;
 
-	fragmentShader = esLoadShader(GL_FRAGMENT_SHADER, sr->fs);
+	fragmentShader = esLoadShader(GL_FRAGMENT_SHADER, Shader::sr->fs_path);
 
 	if (fragmentShader == 0)
 	{
@@ -33,7 +33,6 @@ int Shader::Init()
 	binormAttribute = glGetAttribLocation(program, "a_binorm");
 	tgtAttribute = glGetAttribLocation(program, "a_tgt");
 
-	positionAttribute = glGetAttribLocation(program, "a_posL");
 	//colorAttribute
 	colorAttribute = glGetAttribLocation(program, "a_color");
 	matrixUniform = glGetUniformLocation(program, "u_rotZ");

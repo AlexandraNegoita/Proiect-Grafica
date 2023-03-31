@@ -1,13 +1,15 @@
 #pragma once
-#include "ResourceManager.h"
 #include "../Utilities/utilities.h"
+#include "Resources.h"
 
 class Texture {
-	ResourceManager::TextureResource* tr;
+public:
+	static std::map<int, Texture*> loadedTextures;
+	TextureResource* tr;
 	GLuint tId;
 	int textureWidth, textureHeight, textureBpp;
 	char* loadTexture;
-	Texture(ResourceManager::TextureResource* tr);
+	Texture(TextureResource *tr);
 	void Init();
 	void Load();
 	void freeTexture();

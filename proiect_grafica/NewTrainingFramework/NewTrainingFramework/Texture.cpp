@@ -1,15 +1,16 @@
 #include "stdafx.h"
 #include "Texture.h"
 #include "stdafx.h"
+#include "Resources.h"
 #include <fstream>
 #include "../Utilities/utilities.h"
 
-Texture::Texture(ResourceManager::TextureResource* tr) {
+Texture::Texture(TextureResource* tr) {
 	this->tr = tr;
 }
 
 void Texture::Load() {
-	Texture::loadTexture = LoadTGA(strcat(Texture::tr->path,Texture::tr->file), &(Texture::textureWidth), &(Texture::textureHeight), &(Texture::textureBpp));	
+	Texture::loadTexture = LoadTGA(Texture::tr->file_path, &(Texture::textureWidth), &(Texture::textureHeight), &(Texture::textureBpp));	
 }
 void Texture::Init() {
 	glGenTextures(1, &(Texture::tId));

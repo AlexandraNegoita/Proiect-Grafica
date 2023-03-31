@@ -1,16 +1,21 @@
 #pragma once
-#include "ResourceManager.h"
-#include "Vertex.h"
+#include "stdafx.h"
 #include "../Utilities/utilities.h"
+
+#include "Resources.h"
+#include "Vertex.h"
+
 
 
 class Model {
-	ResourceManager::ModelResource* mr;
+public:
+	static std::map<int, Model*> loadedModels;
+	ModelResource* mr;
 	GLuint iboId, wiredIboId, vboId;
 	GLuint nrIndices, nrVertices, nrIndicesWired;
 	Vertex* verticesData;
 	unsigned short* indices;
-	Model(ResourceManager::ModelResource* mr);
+	Model(ModelResource* mr);
 	void Init();
 	void Load();
 	void freeModel();

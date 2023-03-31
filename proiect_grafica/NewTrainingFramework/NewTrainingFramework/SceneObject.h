@@ -6,6 +6,7 @@
 
 
 class SceneObject {
+public:
 	int modelId;
 	int shaderId;
 	char* type;
@@ -18,9 +19,14 @@ class SceneObject {
 	Vector3 color;
 	bool depthTest;
 
+	Model* model;
+	Shader* shader;
+	Texture** textures;
+
 	void Load();
 	void Init();
 	void Draw();
+
 	SceneObject();
 	~SceneObject();
 };

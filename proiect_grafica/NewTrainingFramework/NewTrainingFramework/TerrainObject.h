@@ -6,6 +6,8 @@
 #include "SceneObject.h"
 
 
-class TerrainObject extends SceneObject{
+class TerrainObject : SceneObject{
+public:
+	TerrainObject();
 	
 };

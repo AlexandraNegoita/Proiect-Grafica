@@ -3,7 +3,6 @@
 
 #include "stdafx.h"
 #include "Vertex.h"
-#include "Shaders.h"
 #include <conio.h>
 #include "Globals.h"
 #include "Camera.h"
@@ -98,13 +97,14 @@
 //	//std::cout << j << std::endl;
 //}
 
-ResourceManager resourceManager;
-SceneManager sceneManager;
+//ResourceManager* resourceManager;
+//SceneManager* sceneManager;
 
+int i = 0;
 int Init ( ESContext *esContext )
 {
 	//glClearColor ( 0.0f, 0.0f, 0.0f, 0.0f );
-
+	i++;
 	//readFile("../../NewResourcesPacket/Models/Croco.nfg");
 	///*glEnable(GL_DEPTH_TEST);*/
 	//glEnable(GL_DEPTH_TEST);
@@ -145,8 +145,8 @@ int Init ( ESContext *esContext )
 	////creation of shaders and program 
 	//return myShaders.Init("../Resources/Shaders/TriangleShaderVS.vs", "../Resources/Shaders/TriangleShaderFS.fs");
 
-	resourceManager.Init();
-	sceneManager.Init();
+	ResourceManager::getInstance() -> Init();
+	return SceneManager::getInstance()->Init();
 
 }
 
@@ -246,7 +246,7 @@ void Draw ( ESContext *esContext )
 	//eglSwapBuffers ( esContext->eglDisplay, esContext->eglSurface ); //schimba buffers; pt urmatoarea scena care urm a fi vizualiata; pt optimizare
 	//
 
-	sceneManager.Draw();
+	SceneManager::getInstance() -> Draw();
 }
 
 void Update ( ESContext *esContext, float deltaTime )
@@ -256,7 +256,7 @@ void Update ( ESContext *esContext, float deltaTime )
 		camera.setDeltaTime(deltaTime);
 		currentTime -= deltaTime;
 	}*/
-	sceneManager.Update();
+	SceneManager::getInstance() -> Update();
 }
 
 void Key ( ESContext *esContext, unsigned char key, bool bIsPressed)
@@ -368,8 +368,8 @@ void Mouse(ESContext* esContext, int LeftRightClick, bool isDoubleClick, bool is
 
 void CleanUp()
 {
-	glDeleteBuffers(1, &vboIdVertices);
-	glDeleteBuffers(1, &vboIdIndices);
+	//glDeleteBuffers(1, &vboIdVertices);
+	//glDeleteBuffers(1, &vboIdIndices);
 }
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -380,11 +380,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	ESContext esContext; //fereastra 
 
     esInitContext ( &esContext );
-
-	esCreateWindow ( &esContext, sceneManager::gameName., sceneManager::defaultScreenSize.width, sceneManager::defaultScreenSize.height, ES_WINDOW_RGB | ES_WINDOW_DEPTH);
-
 	if ( Init ( &esContext ) != 0 )
 		return 0;
+
+	esCreateWindow ( &esContext, (SceneManager::getInstance() -> gameName).c_str(), SceneManager::getInstance() -> dss.width, SceneManager::getInstance() -> dss.height, ES_WINDOW_RGB | ES_WINDOW_DEPTH);
+
+	
 
 	esRegisterDrawFunc ( &esContext, Draw );
 	esRegisterUpdateFunc ( &esContext, Update );

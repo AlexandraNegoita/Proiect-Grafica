@@ -1,3 +1,16 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   ResourceManager.cpp
-C:\Users\Alexa\Documents\grafica\proiect_2015\proiect_2015\NewTrainingFramework_2015\NewTrainingFramework\ResourceManager.cpp(13,6): error C2653: 'Singleton': is not a class or namespace name
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(206,34): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(225,33): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(226,33): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(242,36): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(95): warning C4715: 'ResourceManager::loadModel': not all control paths return a value
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(147): warning C4715: 'ResourceManager::loadTexture': not all control paths return a value
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(184): warning C4715: 'ResourceManager::loadShader': not all control paths return a value
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(69): warning C4172: returning address of local variable or temporary: m
+Control.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+Debug-Nvidia\Model.obj : warning LNK4042: object specified more than once; extras ignored
+ResourceManager.obj : error LNK2019: unresolved external symbol "public: __thiscall Model::Model(struct ModelResource *)" (??0Model@@QAE@PAUModelResource@@@Z) referenced in function "public: class Model * __thiscall ResourceManager::loadModel(int)" (?loadModel@ResourceManager@@QAEPAVModel@@H@Z)
+ResourceManager.obj : error LNK2019: unresolved external symbol "public: __thiscall Model::~Model(void)" (??1Model@@QAE@XZ) referenced in function "public: class Model * __thiscall ResourceManager::loadModel(int)" (?loadModel@ResourceManager@@QAEPAVModel@@H@Z)
+SceneObject.obj : error LNK2019: unresolved external symbol "public: void __thiscall Model::Init(void)" (?Init@Model@@QAEXXZ) referenced in function "public: void __thiscall SceneObject::Init(void)" (?Init@SceneObject@@QAEXXZ)
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\\BIN-Nvidia\NewTrainingFramework.exe : fatal error LNK1120: 3 unresolved externals

@@ -21,6 +21,9 @@ public:
 	Camera();
 	Camera(Vector3 position, Vector3 target, Vector3 up);
 	Camera(Vector3 position, Vector3 target, Vector3 up, GLfloat translationSpeed, GLfloat rotationSpeed, GLfloat nearC, GLfloat farC, GLfloat fov);
+	
+	char* getType();
+	void setType(char* type);
 
 	Vector3 getPosition();
 	void setPosition(Vector3 position);
