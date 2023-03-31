@@ -47,52 +47,52 @@ std::map<int, Model*> Model::loadedModels;
 std::map<int, Texture*> Texture::loadedTextures;
 std::map<int, Shader*> Shader::loadedShaders;
 
-Model* ResourceManager::loadModel(int modelId) {
-    //models
-    //daca modelul exista in map, returneaza pointer 
-    std::map<int, ModelResource*>::iterator it;
-    it = models.find(modelId);
-    if (it != models.end()) {
-        if (it->second->isLoaded == true) {
-            // daca exista si in models si in loaded 
-            // returneaza modelul loaded
-            std::map<int, Model*>::iterator itM;
-            itM = Model::loadedModels.find(modelId);
-            if (itM != Model::loadedModels.end()) {
-                return itM->second;
-            }
-        }
-        else {
-            // daca exista in models dar nu e loaded 
-            // returneaza un Model care trebuie loaded
-            Model m =  Model(it->second);
-            return &m; //nu e loaded
-        }
-    }
-    else {
-        // daca nu exista in models - > eroare ?
-       // return new Model(it->second);
-        std::cout << "eroare";
-    }
-    //else {
-    //    //altfel, verifica daca exista in Model Resource si il incarca
-    //    xml_node<>* modelsNode = ResourceManager::resourceManagerNode->first_node("models");
-    //    for (xml_node<>* folderNode = modelsNode->first_node("folder"); folderNode; folderNode = folderNode->next_sibling())
-    //    {
-    //        for (xml_node<>* modelNode = folderNode->first_node("model"); modelNode; modelNode = modelNode->next_sibling())
-    //        {
-    //            int mId = atoi(modelNode->first_attribute("id")->value());
-    //            if (mId == modelId) {
-    //                ModelResource* model;
-    //                (*model).file_path = strcat(folderNode->first_attribute("path")->value(), modelNode->first_node("file")->value());
-    //                ResourceManager::models.insert(std::pair<int,ModelResource*>(mId, model));
-    //                return model;
-    //            }
-
-    //        }
-    //    }
-    //}
-}
+//Model* ResourceManager::loadModel(int modelId) {
+//    //models
+//    //daca modelul exista in map, returneaza pointer 
+//    std::map<int, ModelResource*>::iterator it;
+//    it = models.find(modelId);
+//    if (it != models.end()) {
+//        if (it->second->isLoaded == true) {
+//            // daca exista si in models si in loaded 
+//            // returneaza modelul loaded
+//            std::map<int, Model*>::iterator itM;
+//            itM = Model::loadedModels.find(modelId);
+//            if (itM != Model::loadedModels.end()) {
+//                return itM->second;
+//            }
+//        }
+//        else {
+//            // daca exista in models dar nu e loaded 
+//            // returneaza un Model care trebuie loaded
+//            Model m =  Model(it->second);
+//            return &m; //nu e loaded
+//        }
+//    }
+//    else {
+//        // daca nu exista in models - > eroare ?
+//       // return new Model(it->second);
+//        std::cout << "eroare";
+//    }
+//    //else {
+//    //    //altfel, verifica daca exista in Model Resource si il incarca
+//    //    xml_node<>* modelsNode = ResourceManager::resourceManagerNode->first_node("models");
+//    //    for (xml_node<>* folderNode = modelsNode->first_node("folder"); folderNode; folderNode = folderNode->next_sibling())
+//    //    {
+//    //        for (xml_node<>* modelNode = folderNode->first_node("model"); modelNode; modelNode = modelNode->next_sibling())
+//    //        {
+//    //            int mId = atoi(modelNode->first_attribute("id")->value());
+//    //            if (mId == modelId) {
+//    //                ModelResource* model;
+//    //                (*model).file_path = strcat(folderNode->first_attribute("path")->value(), modelNode->first_node("file")->value());
+//    //                ResourceManager::models.insert(std::pair<int,ModelResource*>(mId, model));
+//    //                return model;
+//    //            }
+//
+//    //        }
+//    //    }
+//    //}
+//}
 
 Texture* ResourceManager::loadTexture(int textureId) {
     std::map<int, TextureResource*>::iterator it;
