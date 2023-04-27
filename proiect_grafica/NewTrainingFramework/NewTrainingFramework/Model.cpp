@@ -11,15 +11,15 @@ Model::Model(ModelResource *mr) {
 void Model::Load() {
 	FILE* modelFile;
 
-	modelFile = fopen(Model::mr->file_path, "r");
+	modelFile = fopen(this->mr->file_path, "r");
 	char* line = (char*)malloc(sizeof(char) * 1000);
 	fgets(line, 1000, modelFile);
 	int nrVerticesCpy;
 	int nrIndicesCpy;
 	int lineIndice;
 	int res = sscanf(line, "NrVertices: %u", &nrVerticesCpy);
-	Model::nrVertices = nrVerticesCpy;
-	Model::verticesData = new Vertex[Model::nrVertices];
+	this->nrVertices = nrVerticesCpy;
+	this->verticesData = new Vertex[this->nrVertices];
 	int i = -1;
 
 	while (nrVerticesCpy) {
@@ -31,7 +31,7 @@ void Model::Load() {
 		newVertex.color.y = 0.5f;
 		newVertex.color.z = 0.5f;
 
-		Model::verticesData[++i] = newVertex;
+		this->verticesData[++i] = newVertex;
 		nrVerticesCpy--;
 	}
 
@@ -39,33 +39,34 @@ void Model::Load() {
 	unsigned short ind1, ind2, ind3;
 	int lineIndiceI;
 	int res3 = sscanf(line, "NrIndices: %u", &nrIndicesCpy);
-	Model::nrIndices = nrIndicesCpy;
-	Model::indices = new unsigned short[Model::nrIndices];
+	this->nrIndices = nrIndicesCpy;
+	this->indices = new unsigned short[this->nrIndices];
 	int j = -1;
 
 	while (nrIndicesCpy / 3) {
 		fgets(line, 1000, modelFile);
 		int res4 = sscanf(line, "   %u.    %hu,    %hu,    %hu", &lineIndiceI, &ind1, &ind2, &ind3);
-		Model::indices[++j] = ind1;
-		Model::indices[++j] = ind2;
-		Model::indices[++j] = ind3;
+		this->indices[++j] = ind1;
+		this->indices[++j] = ind2;
+		this->indices[++j] = ind3;
 		nrIndicesCpy -= 3;
 	}
+	this->loadedModels.insert(std::pair<int, Model*>(this->mr->modelId, this));
 }
 
 void Model::Init() {
-	Model::Load();
+	// this->Load();
 
-	glEnable(GL_DEPTH_TEST);
-	glGenBuffers(1, &(Model::vboId));
-	glBindBuffer(GL_ARRAY_BUFFER, Model::vboId);
-	glBufferData(GL_ARRAY_BUFFER, Model::nrVertices * sizeof(Vertex), Model::verticesData, GL_STATIC_DRAW);
+	// glEnable(GL_DEPTH_TEST);
+	glGenBuffers(1, &(this->vboId));
+	glBindBuffer(GL_ARRAY_BUFFER, this->vboId);
+	glBufferData(GL_ARRAY_BUFFER, this->nrVertices * sizeof(Vertex), this->verticesData, GL_STATIC_DRAW);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 
-	glGenBuffers(1, &(Model::iboId));
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, Model::iboId);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, Model::nrIndices * sizeof(unsigned short), Model::indices, GL_STATIC_DRAW);
+	glGenBuffers(1, &(this->iboId));
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, this->iboId);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, this->nrIndices * sizeof(unsigned short), this->indices, GL_STATIC_DRAW);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 }
 

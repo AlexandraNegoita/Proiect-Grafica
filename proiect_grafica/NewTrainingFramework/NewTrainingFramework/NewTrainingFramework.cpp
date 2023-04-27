@@ -101,12 +101,15 @@
 //SceneManager* sceneManager;
 
 int i = 0;
+int screenWidth;
+int screenHeight;
+
 int Init ( ESContext *esContext )
 {
-	//glClearColor ( 0.0f, 0.0f, 0.0f, 0.0f );
-	i++;
+	//glClearColor ( 1.0f, 0.0f, 0.0f, 1.0f );
+	// i++;
 	//readFile("../../NewResourcesPacket/Models/Croco.nfg");
-	///*glEnable(GL_DEPTH_TEST);*/
+	glEnable(GL_DEPTH_TEST);
 	//glEnable(GL_DEPTH_TEST);
 	////glDepthFunc(GL_GREATER);
 	////buffer object
@@ -114,13 +117,11 @@ int Init ( ESContext *esContext )
 	//glBindBuffer(GL_ARRAY_BUFFER, vboIdVertices); //punem tipul de buffer
 	//glBufferData(GL_ARRAY_BUFFER, nrVertices* sizeof(Vertex), verticesData, GL_STATIC_DRAW); //verticesData e static; va avea 3*sizeof vertex
 	//glBindBuffer(GL_ARRAY_BUFFER, 0); //se inchide buffer-ul
-
 	////p GL_ELEMENT_ARRAY_BUFFER
 	//glGenBuffers(1, &vboIdIndices);
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vboIdIndices);
 	//glBufferData(GL_ELEMENT_ARRAY_BUFFER, nrIndices * sizeof(unsigned short), indices, GL_STATIC_DRAW); 
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-
 	////glGenTextures(1, &id_textura);
 	//glGenTextures(1, &vboIdTextures);
 	//glBindTexture(GL_TEXTURE_2D, vboIdTextures);
@@ -136,87 +137,77 @@ int Init ( ESContext *esContext )
 	//	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (GLsizei)textureWidth, (GLsizei)textureHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, loadTextureTGA);
 	//}
 	//glBindTexture(GL_TEXTURE_2D, 0);
-
 	////glGenBuffers(1, &vboId); //genereaza un id de buffer 
 	////glBindBuffer(GL_ARRAY_BUFFER, vboId); //punem tipul de buffer
 	////glBufferData(GL_ARRAY_BUFFER, sizeof(lineVertices), lineVertices, GL_STATIC_DRAW); //verticesData e static; va avea 3*sizeof vertex
 	////glBindBuffer(GL_ARRAY_BUFFER, 0); //se inchide buffer-ul
-
 	////creation of shaders and program 
 	//return myShaders.Init("../Resources/Shaders/TriangleShaderVS.vs", "../Resources/Shaders/TriangleShaderFS.fs");
+	
+	//glBindBuffer(GL_ARRAY_BUFFER, 0);
+	/*GLuint a = 7;
+	glGenBuffers(1, &a);
+	glGenBuffers(1, &a);*/
 
 	ResourceManager::getInstance() -> Init();
-	return SceneManager::getInstance()->Init();
-
+	SceneManager::getInstance()->Init();
+	return 0;
 }
 
 void Draw ( ESContext *esContext )
 { //strict desen; la fiecare frame
 	//glClear(GL_COLOR_BUFFER_BIT);
 	//glClear( GL_DEPTH_BUFFER_BIT);
-
+	// 
 	//glUseProgram(myShaders.program);
-
+	// 
 	//glBindBuffer(GL_ARRAY_BUFFER, vboIdVertices);
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vboIdIndices);
-
 	//glActiveTexture(GL_TEXTURE0);
 	//glBindTexture(GL_TEXTURE_2D, vboIdTextures);
-
-
 	//if(myShaders.positionAttribute != -1)
 	//{	
 	//	glEnableVertexAttribArray(myShaders.positionAttribute);
 	//	glVertexAttribPointer(myShaders.positionAttribute, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0); //sizeof - din cat in cat sa sara in mem sa gaseasca urm informatie
 	//}
-
 	//if (myShaders.colorAttribute != -1)
 	//{
 	//	glEnableVertexAttribArray(myShaders.colorAttribute);
 	//	glVertexAttribPointer(myShaders.colorAttribute, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(sizeof(Vector3)));
 	//}
-
 	//if (myShaders.normAttribute != -1)
 	//{
 	//	glEnableVertexAttribArray(myShaders.normAttribute);
 	//	glVertexAttribPointer(myShaders.normAttribute, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(2*sizeof(Vector3))); 
 	//}
-
 	//if (myShaders.binormAttribute != -1)
 	//{
 	//	glEnableVertexAttribArray(myShaders.binormAttribute);
 	//	glVertexAttribPointer(myShaders.binormAttribute, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(3*sizeof(Vector3)));
 	//}
-
 	//if (myShaders.tgtAttribute != -1)
 	//{
 	//	glEnableVertexAttribArray(myShaders.tgtAttribute);
 	//	glVertexAttribPointer(myShaders.tgtAttribute, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(4*sizeof(Vector3)));
 	//}
-
 	//if (myShaders.uvAttribute != -1)
 	//{
 	//	glEnableVertexAttribArray(myShaders.uvAttribute);
 	//	glVertexAttribPointer(myShaders.uvAttribute, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(5 * sizeof(Vector3)));
 	//}
-
 	//Matrix cameraView = camera.getViewMatrix();
 	//if (myShaders.viewUniform != -1)
 	//{
 	//	glUniformMatrix4fv(myShaders.viewUniform, 1, GL_FALSE, (GLfloat*)cameraView.m);
 	//}
-
 	//Matrix cameraPerspective = camera.getPerspectiveMatrix();
 	//if (myShaders.perspectiveUniform != -1)
 	//{
 	//	glUniformMatrix4fv(myShaders.perspectiveUniform, 1, GL_FALSE, (GLfloat*)cameraPerspective.m);
 	//}
-
 	//if (myShaders.uvAttribute != -1) {
 	//	glUniform1i(myShaders.textureUniform, 0);
 	//}
-
-
 	////se inmulteste cu viewMatrix
 	//// Matrix m;
 	//// angle += 0.01;
@@ -226,10 +217,8 @@ void Draw ( ESContext *esContext )
 	//// {
 	//// 	glUniformMatrix4fv(myShaders.matrixUniform, 1, GL_FALSE, (GLfloat*)m.m);
 	//// }
-
 	////color -offset - sizeof(vector3)
 	////glDrawArrays(GL_LINES, 0, 12);
-
 	////glDrawElements(GL_TRIANGLES, nr_indici, GL_UNSIGNED_SHORT, 0);
 	//if (wired_format == false) {
 	//	glDrawElements(GL_TRIANGLES, nrIndices, GL_UNSIGNED_SHORT, 0);
@@ -238,92 +227,94 @@ void Draw ( ESContext *esContext )
 	//	glDrawElements(GL_LINES, nrIndices, GL_UNSIGNED_SHORT, 0);
 	//}
 	//
-
 	//glBindBuffer(GL_ARRAY_BUFFER, 0);
 	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	//
-
 	//eglSwapBuffers ( esContext->eglDisplay, esContext->eglSurface ); //schimba buffers; pt urmatoarea scena care urm a fi vizualiata; pt optimizare
 	//
-
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	SceneManager::getInstance() -> Draw();
+	eglSwapBuffers(esContext->eglDisplay, esContext->eglSurface);
 }
 
 void Update ( ESContext *esContext, float deltaTime )
 {
 	//partea de calculare; apelat la fiecare frame
-	/*if (currentTime > maxTime) {
-		camera.setDeltaTime(deltaTime);
-		currentTime -= deltaTime;
-	}*/
+	Camera* c = SceneManager::getInstance() -> getActiveCamera();
+	if (c->currentTime > c->maxTime) {
+		c->setDeltaTime(deltaTime);
+		c->currentTime -= deltaTime;
+	}
 	SceneManager::getInstance() -> Update();
 }
 
 void Key ( ESContext *esContext, unsigned char key, bool bIsPressed)
 {
 	//cand apasam o tasta//ispressed - 0 cand luam degetul de pe tasta, 1 cand e apasat in continuu
-	/*switch (key) {
+	Camera* c = SceneManager::getInstance()->getActiveCamera();
+
+	switch (key) {
 		case 'W': case 'w': {
-			camera.moveOy(1);
-			camera.updateWorldView();
+			c->moveOy(1);
+			c->updateWorldView();
 			break;
 		}
 		case 'S': case 's': {
-			camera.moveOy(-1);
-			camera.updateWorldView(); 
+			c->moveOy(-1);
+			c->updateWorldView(); 
 			break;
 		}
 		case 'A': case 'a': {
-			camera.moveOx(-1);
-			camera.updateWorldView();
+			c->moveOx(-1);
+			c->updateWorldView();
 			break;
 		}
 		case 'D': case 'd': {
-			camera.moveOx(1);
-			camera.updateWorldView();
+			c->moveOx(1);
+			c->updateWorldView();
 			break;
 		}
 		case 'Z': case 'z': {
-			camera.moveOz(1);
-			camera.updateWorldView();
+			c->moveOz(1);
+			c->updateWorldView();
 			break;
 		}
 		case 'X': case 'x': {
-			camera.moveOz(-1);
-			camera.updateWorldView();
+			c->moveOz(-1);
+			c->updateWorldView();
 			break;
 		}
 		case char(37): {
-			camera.rotateOy(1);
-			camera.updateWorldView();
+			c->rotateOy(1);
+			c->updateWorldView();
 			break;
 		}
 		case char(39) : {
-			camera.rotateOy(-1);
-			camera.updateWorldView();
+			c->rotateOy(-1);
+			c->updateWorldView();
 			break;
 		}
 		case char(38) : {
-			camera.rotateOx(1);
-			camera.updateWorldView();
+			c->rotateOx(1);
+			c->updateWorldView();
 			break;
 		}
 		case char(40) : {
-			camera.rotateOx(-1);
-			camera.updateWorldView();
+			c->rotateOx(-1);
+			c->updateWorldView();
 			break;
 		}
 		case 'k': case 'K': {
-			camera.rotateOz(1);
-			camera.updateWorldView();
+			c->rotateOz(1);
+			c->updateWorldView();
 			break;
 		}
 		case 'l': case 'L': {
-			camera.rotateOz(-1);
-			camera.updateWorldView();
+			c->rotateOz(-1);
+			c->updateWorldView();
 			break;
 		}
-		case 'p': case 'P': {
+		/*case 'p': case 'P': {
 			if (bIsPressed) {
 				wired_format = true;
 			}
@@ -336,8 +327,9 @@ void Key ( ESContext *esContext, unsigned char key, bool bIsPressed)
 		//up 38
 		//right 39
 		//down 40
-	//}
+	}
 }
+
 
 void Mouse(ESContext* esContext, int LeftRightClick, bool isDoubleClick, bool isPressed, float coordX, float coordY)//left/right button, click/dublu-click, isPressed, coordX, coordY
 {
@@ -380,17 +372,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	ESContext esContext; //fereastra 
 
     esInitContext ( &esContext );
-	if ( Init ( &esContext ) != 0 )
-		return 0;
-
-	esCreateWindow ( &esContext, (SceneManager::getInstance() -> gameName).c_str(), SceneManager::getInstance() -> dss.width, SceneManager::getInstance() -> dss.height, ES_WINDOW_RGB | ES_WINDOW_DEPTH);
 
 	
+	// esCreateWindow(&esContext, (SceneManager::getInstance()->gameName).c_str(), SceneManager::getInstance()->dss.width, SceneManager::getInstance()->dss.height, ES_WINDOW_RGB | ES_WINDOW_DEPTH);
+	esCreateWindow(&esContext, "Hello Croco", Globals::screenWidth, Globals::screenHeight, ES_WINDOW_RGB | ES_WINDOW_DEPTH);
+
+
+	if (Init(&esContext) != 0)
+		return 0;
+
 
 	esRegisterDrawFunc ( &esContext, Draw );
 	esRegisterUpdateFunc ( &esContext, Update );
 	esRegisterKeyFunc ( &esContext, Key);
-	esRegisterMouseFunc(&esContext, Mouse);
+//	esRegisterMouseFunc(&esContext, Mouse);
 
 	esMainLoop ( &esContext );
 

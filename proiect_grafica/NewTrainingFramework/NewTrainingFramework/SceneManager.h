@@ -14,6 +14,7 @@ public:
 	int Init();
 	void Draw();
 	void Update();
+	Camera* getActiveCamera();
 	void freeResources();
 
 	std::string gameName;
@@ -30,7 +31,7 @@ public:
 	};
 	backgroundColor bc;
 
-	std::map<int, Camera> cameras;
+	std::map<int, Camera*> cameras;
 	Control* controls[100];
 	int activeCamera;
 	std::map<int, SceneObject*> objects;

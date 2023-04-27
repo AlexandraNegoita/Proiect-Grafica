@@ -2,6 +2,7 @@
 #include "../Utilities/rapidxml-1.13/rapidxml.hpp"
 #include "ResourceManager.h"
 #include "Model.h"
+#include "Model.cpp"
 #include "Resources.h"
 #include "Texture.h"
 #include "Shader.h"
@@ -29,7 +30,7 @@ ResourceManager* ResourceManager:: getInstance()
 
 
 void ResourceManager :: Init() {
-	spInstance = new ResourceManager();
+	spInstance = this;
     ResourceManager::parseResourceManagerXML();
 }
 
@@ -65,122 +66,69 @@ Model* ResourceManager::loadModel(int modelId) {
         else {
             // daca exista in models dar nu e loaded 
             // returneaza un Model care trebuie loaded
-            Model m =  Model(it->second);
-            return &m; //nu e loaded
+           
+            Model* m = new Model(it->second);
+            m->Load();
+            m->Init();
+            Model::loadedModels.insert(std::pair<int, Model*>(it->second->modelId, m));
+            return m;
         }
     }
     else {
         // daca nu exista in models - > eroare ?
        // return new Model(it->second);
-        std::cout << "eroare";
+        std::cout << "eroare-loadModel-RM";
     }
-    //else {
-    //    //altfel, verifica daca exista in Model Resource si il incarca
-    //    xml_node<>* modelsNode = ResourceManager::resourceManagerNode->first_node("models");
-    //    for (xml_node<>* folderNode = modelsNode->first_node("folder"); folderNode; folderNode = folderNode->next_sibling())
-    //    {
-    //        for (xml_node<>* modelNode = folderNode->first_node("model"); modelNode; modelNode = modelNode->next_sibling())
-    //        {
-    //            int mId = atoi(modelNode->first_attribute("id")->value());
-    //            if (mId == modelId) {
-    //                ModelResource* model;
-    //                (*model).file_path = strcat(folderNode->first_attribute("path")->value(), modelNode->first_node("file")->value());
-    //                ResourceManager::models.insert(std::pair<int,ModelResource*>(mId, model));
-    //                return model;
-    //            }
-
-    //        }
-    //    }
-    //}
 }
 
 Texture* ResourceManager::loadTexture(int textureId) {
     std::map<int, TextureResource*>::iterator it;
     it = textures.find(textureId);
-    if (it != textures.end() && it->second->isLoaded == true) {
-        std::map<int, Texture*>::iterator itT;
-        itT = Texture::loadedTextures.find(textureId);
-        if (itT != Texture::loadedTextures.end()) {
-            return itT->second;
+    if (it != textures.end()) {
+        if (it->second->isLoaded == true) {
+            std::map<int, Texture*>::iterator itT;
+            itT = Texture::loadedTextures.find(textureId);
+            if (itT != Texture::loadedTextures.end()) {
+                return itT->second;
+            }
+        }
+        else {
+            //return new Texture(it->second);
+            Texture* t = new Texture(it->second);
+            t->Load();
+            t->Init();
+            Texture::loadedTextures.insert(std::pair<int, Texture*>(it->second->textureId, t));
+            return t;
         }
     }
     else {
-        return new Texture(it->second);
+        std::cout << "eroare-loadTexture-RM";
     }
-    //std::map<int, TextureResource*>::iterator it;
-    //it = textures.find(textureId);
-    //if (it != textures.end()) {
-    //    return it->second;
-    //}
-    //else {
-    //    xml_node<>* texturesNode = ResourceManager::resourceManagerNode->first_node("textures");
-    //    for (xml_node<>* folderNode = texturesNode->first_node("folder"); folderNode; folderNode = folderNode->next_sibling())
-    //    {
-    //        for (xml_node<>* textureNode = folderNode->first_node("texture"); textureNode; textureNode = textureNode->next_sibling())
-    //        {
-    //            int tId = atoi(textureNode->first_attribute("id")->value());
-    //            if (tId == textureId) {
-    //                TextureResource *texture;
-    //                (*texture).file_path = strcat(folderNode->first_attribute("path")->value(), textureNode->first_node("file")->value());
-    //                if (textureNode->first_attribute("type")->value() == "2d") {
-    //                    (*texture).type = GL_TEXTURE_2D;
-    //                }
-    //                //(*texture).file = textureNode->first_node("file")->value();
-    //                if (textureNode->first_node("min_filter")->value() == "LINEAR") {
-    //                    (*texture).min_filter = GL_LINEAR;
-    //                }
-    //                if (textureNode->first_node("mag_filter")->value() == "LINEAR") {
-    //                    (*texture).mag_filter = GL_LINEAR;
-    //                }
-    //                if (textureNode->first_node("wrap_s")->value() == "CLAMP_TO_EDGE") {
-    //                    (*texture).wrap_s = GL_CLAMP_TO_EDGE;
-    //                }
-    //                if (textureNode->first_node("wrap_t")->value() == "CLAMP_TO_EDGE") {
-    //                    (*texture).wrap_t = GL_CLAMP_TO_EDGE;
-    //                }
-    //                ResourceManager::textures.insert(std::pair<int, TextureResource*>(tId, texture));
-    //                return texture;
-    //            }
-    //        }
-    //    }
-    //}
+
 }
 
 Shader* ResourceManager::loadShader(int shaderId) {
     std::map<int, ShaderResource*>::iterator it;
     it = shaders.find(shaderId);
-    if (it != shaders.end() && it->second->isLoaded == true) {
-        std::map<int, Shader*>::iterator itS;
-        itS = Shader::loadedShaders.find(shaderId);
-        if (itS != Shader::loadedShaders.end()) {
-            return itS->second;
+    if (it != shaders.end()) {
+        if (it->second->isLoaded == true) {
+            std::map<int, Shader*>::iterator itS;
+            itS = Shader::loadedShaders.find(shaderId);
+            if (itS != Shader::loadedShaders.end()) {
+                return itS->second;
+            }
+        }
+        else {
+            //return new Shader(it->second);
+            Shader* s = new Shader(it->second);
+            s->Init();
+            Shader::loadedShaders.insert(std::pair<int, Shader*>(it->second->shaderId, s));
+            return s;
         }
     }
     else {
-        return new Shader(it->second);
+        std::cout << "eroare-loadShader-RM";
     }
-    //std::map<int, ShaderResource*>::iterator it;
-    //it = shaders.find(shaderId);
-    //if (it != shaders.end()) {
-    //    return it->second;
-    //}
-    //else {
-    //    xml_node<>* shadersNode = ResourceManager::resourceManagerNode->first_node("shaders");
-    //    for (xml_node<>* folderNode = shadersNode->first_node("folder"); folderNode; folderNode = folderNode->next_sibling())
-    //    {
-    //        for (xml_node<>* shaderNode = folderNode->first_node("shader"); shaderNode; shaderNode = shaderNode->next_sibling())
-    //        {
-    //            int sId = atoi(shaderNode->first_attribute("id")->value());
-    //            if (sId == shaderId) {
-    //                ShaderResource* sr;
-    //                //(*sr).path = folderNode->first_attribute("path")->value();
-    //                (*sr).vs_path = strcat(folderNode->first_attribute("path")->value(), shaderNode->first_node("vs")->value());
-    //                (*sr).fs_path = strcat(folderNode->first_attribute("path")->value(), shaderNode->first_node("fs")->value());
-    //                shaders.insert(std::pair<int, ShaderResource*>(sId, sr));
-    //            }
-    //        }
-    //    }
-    //}
 }
 
 void ResourceManager::parseResourceManagerXML() {
@@ -202,8 +150,20 @@ void ResourceManager::parseResourceManagerXML() {
             int modelId = atoi(modelNode->first_attribute("id")->value());
             ModelResource* model = new ModelResource();
             (*model).modelId = modelId;
-            char pathCpy[1000];
-            (*model).file_path = strcat(strcpy(pathCpy, folderNode->first_attribute("path")->value()), modelNode->first_node("file")->value());
+            
+          //  char* pathCpy = new char[1000];
+            std::string pathCpy;
+            pathCpy.append("../");
+            pathCpy.append(folderNode->first_attribute("path")->value());
+            pathCpy.append(modelNode->first_node("file")->value());
+            
+            //(*model).file_path = strcat(strcpy(pathCpy, folderNode->first_attribute("path")->value()), modelNode->first_node("file")->value());
+            //(*model).file_path = pathCpy;
+            
+            char* pathStr = new char[pathCpy.length() + 1];
+            strcpy(pathStr, pathCpy.c_str());
+            (*model).file_path = pathStr;
+
             (*model).isLoaded = false;
             
             models.insert(std::pair<int, ModelResource*>(modelId, model));
@@ -220,10 +180,28 @@ void ResourceManager::parseResourceManagerXML() {
             int shaderId = atoi(shaderNode->first_attribute("id")->value());
             ShaderResource* shader = new ShaderResource();
             (*shader).shaderId = shaderId;
-            char vsPathCpy[1000];
-            char fsPathCpy[1000];
-            (*shader).vs_path = strcat(strcpy(vsPathCpy,folderNode->first_attribute("path")->value()), shaderNode->first_node("vs")->value());
-            (*shader).fs_path = strcat(strcpy(fsPathCpy,folderNode->first_attribute("path")->value()), shaderNode->first_node("fs")->value());
+            /*char* vsPathCpy = new char[1000];
+            char* fsPathCpy = new char[1000];
+            (*shader).vs_path = strcat("../", strcpy(vsPathCpy, folderNode->first_attribute("path")->value()), shaderNode->first_node("vs")->value());
+            (*shader).fs_path = strcat(strcpy(fsPathCpy,folderNode->first_attribute("path")->value()), shaderNode->first_node("fs")->value());*/
+            std::string vsPathCpy;
+            vsPathCpy.append("../");
+            vsPathCpy.append(folderNode->first_attribute("path")->value());
+            vsPathCpy.append(shaderNode->first_node("vs")->value());
+
+            std::string fsPathCpy;
+            fsPathCpy.append("../");
+            fsPathCpy.append(folderNode->first_attribute("path")->value());
+            fsPathCpy.append(shaderNode->first_node("fs")->value());
+
+            char* vsPathStr = new char[vsPathCpy.length() + 1];
+            strcpy(vsPathStr, vsPathCpy.c_str());
+            (*shader).vs_path = vsPathStr;
+
+            char* fsPathStr = new char[fsPathCpy.length() + 1];
+            strcpy(fsPathStr, fsPathCpy.c_str());
+            (*shader).fs_path = fsPathStr;
+
             (*shader).isLoaded = false;
             shaders.insert(std::pair<int, ShaderResource*>(shaderId, shader));
         }
@@ -238,22 +216,32 @@ void ResourceManager::parseResourceManagerXML() {
             int textureId= atoi(textureNode->first_attribute("id")->value());
             TextureResource* texture = new TextureResource();
             (*texture).textureId = textureId;
-            char pathCpy[1000];
-            (*texture).file_path = strcat(strcpy(pathCpy,folderNode->first_attribute("path")->value()), textureNode->first_node("file")->value());
+            /*char* pathCpy = new char[1000];
+            (*texture).file_path = strcat(strcpy(pathCpy,folderNode->first_attribute("path")->value()), textureNode->first_node("file")->value());*/
+            std::string pathCpy;
+            pathCpy.append("../");
+            pathCpy.append(folderNode->first_attribute("path")->value());
+            pathCpy.append(textureNode->first_node("file")->value());
+           
+
+            char* pathStr = new char[pathCpy.length() + 1];
+            strcpy(pathStr, pathCpy.c_str());
+            (*texture).file_path = pathStr;
+
             //(*texture).file = textureNode->first_node("file")->value();
-            if (textureNode->first_attribute("type")->value() == "2d") {
+            if (strcmp(textureNode->first_attribute("type")->value(), "2d") == 0) {
                 (*texture).type = GL_TEXTURE_2D;
             }
-            if (textureNode->first_node("min_filter")->value() == "LINEAR") {
+            if (strcmp(textureNode->first_node("min_filter")->value(), "LINEAR") == 0) {
                 (*texture).min_filter = GL_LINEAR;
             }
-            if (textureNode->first_node("mag_filter")->value() == "LINEAR") {
+            if (strcmp(textureNode->first_node("mag_filter")->value(), "LINEAR") == 0) {
                 (*texture).mag_filter = GL_LINEAR;
             }
-            if (textureNode->first_node("wrap_s")->value() == "CLAMP_TO_EDGE") {
+            if (strcmp(textureNode->first_node("wrap_s")->value(), "CLAMP_TO_EDGE") == 0) {
                 (*texture).wrap_s = GL_CLAMP_TO_EDGE;
             }
-            if (textureNode->first_node("wrap_t")->value() == "CLAMP_TO_EDGE") {
+            if (strcmp(textureNode->first_node("wrap_t")->value(), "CLAMP_TO_EDGE") == 0) {
                 (*texture).wrap_t = GL_CLAMP_TO_EDGE;
             }
             (*texture).isLoaded = false;

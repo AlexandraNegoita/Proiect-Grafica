@@ -10,30 +10,30 @@ Texture::Texture(TextureResource* tr) {
 }
 
 void Texture::Load() {
-	Texture::loadTexture = LoadTGA(Texture::tr->file_path, &(Texture::textureWidth), &(Texture::textureHeight), &(Texture::textureBpp));	
+	this->loadTexture = LoadTGA(this->tr->file_path, &(this->textureWidth), &(this->textureHeight), &(this->textureBpp));
 }
 void Texture::Init() {
-	glGenTextures(1, &(Texture::tId));
+	glGenTextures(1, &(this->tId));
 
-	glBindTexture(Texture::tr->type, Texture::tId);
-	glTexParameteri(Texture::tr->type, GL_TEXTURE_MIN_FILTER, Texture::tr->min_filter);
-	glTexParameteri(Texture::tr->type, GL_TEXTURE_MAG_FILTER, Texture::tr->mag_filter);
+	glBindTexture(this->tr->type, this->tId);
+	glTexParameteri(this->tr->type, GL_TEXTURE_MIN_FILTER, this->tr->min_filter);
+	glTexParameteri(this->tr->type, GL_TEXTURE_MAG_FILTER, this->tr->mag_filter);
 
-	glTexParameteri(Texture::tr->type, GL_TEXTURE_WRAP_S, Texture::tr->wrap_s);
-	glTexParameteri(Texture::tr->type, GL_TEXTURE_WRAP_T, Texture::tr->wrap_t);
+	glTexParameteri(this->tr->type, GL_TEXTURE_WRAP_S, this->tr->wrap_s);
+	glTexParameteri(this->tr->type, GL_TEXTURE_WRAP_T, this->tr->wrap_t);
 	
-	Texture::Load(); 
+	// Texture::Load(); 
 	
-	if (Texture::textureBpp == 24) {
-		glTexImage2D(Texture::tr->type, 0, GL_RGB, (GLsizei)(Texture::textureWidth), (GLsizei)(Texture::textureHeight), 0, GL_RGB, GL_UNSIGNED_BYTE, Texture::loadTexture);
+	if (this->textureBpp == 24) {
+		glTexImage2D(this->tr->type, 0, GL_RGB, (GLsizei)(this->textureWidth), (GLsizei)(this->textureHeight), 0, GL_RGB, GL_UNSIGNED_BYTE, this->loadTexture);
 	}
 	else {
-		glTexImage2D(Texture::tr->type, 0, GL_RGBA, (GLsizei)(Texture::textureWidth), (GLsizei)(Texture::textureHeight), 0, GL_RGBA, GL_UNSIGNED_BYTE, Texture::loadTexture);
+		glTexImage2D(this->tr->type, 0, GL_RGBA, (GLsizei)(this->textureWidth), (GLsizei)(this->textureHeight), 0, GL_RGBA, GL_UNSIGNED_BYTE, this->loadTexture);
 	}
 
-	glBindTexture(Texture::tr->type, 0);
+	glBindTexture(this->tr->type, 0);
 }
 
 void Texture::freeTexture() {
-	delete(Texture::tr);
+	delete(this->tr);
 }

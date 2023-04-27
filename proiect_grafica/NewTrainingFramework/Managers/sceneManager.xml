@@ -12,7 +12,7 @@
 		-->
 	</defaultScreenSize>
 	<backgroundColor>
-		<r>0.0</r>
+		<r>1.0</r>
 		<g>0.0</g>
 		<b>0.0</b>
 	</backgroundColor>
@@ -52,12 +52,12 @@
 			<position>
 				<x>0</x>
 				<y>0</y>
-				<z>1</z>
+				<z>-800</z>
 			</position>
 			<target>
 				<x>0</x>
 				<y>0</y>
-				<z>-1</z>
+				<z>1</z>
 			</target>
 			<up>
 				<x>0</x>
@@ -68,7 +68,7 @@
 			<rotationSpeed>0.3</rotationSpeed>
 			<fov>45</fov>
 			<near>0.2</near>
-			<far>10000</far>
+			<far>15000</far>
 		</camera>
 		<!-- eventual si alte cameras -->
 	</cameras>
@@ -89,20 +89,20 @@
 				<texture id="4"/>
 			</textures>
 			<position>
-				<x>20.5</x>
-				<y>27</y>
-				<z>21.22</z>
-			</position>
-			<rotation>
-				<x>0.5</x>
-				<y>1.4</y>
-				<z>1</z>
-			</rotation>
-			<scale>
-				<x>1.0</x>
-				<y>1.0</y>
-				<z>1.0</z>
-			</scale>
+                <x>0</x>
+                <y>-10</y>
+                <z>10</z>
+            </position>
+            <rotation>
+                <x>0</x>
+                <y>0</y>
+                <z>10</z>
+            </rotation>
+            <scale>
+                <x>.05</x>
+                <y>.05</y>
+                <z>.05</z>
+            </scale>
 			<!--
 			Exemple de alte configurari care vor fi adaugate si parsate mai tarziu (pentru taskuri ulterioare)
 			<followingCamera>
@@ -127,59 +127,9 @@
 			</lights>
 			-->
 		</object>
-		<object id="3">
-			
-			<model>5</model>
-			<shader>10</shader>
-			<type>normal</type>
-			<wired/>
-			<name>Mesh_minge</name>
-			<color>
-				<r>1.0</r>
-				<g>0.0</g>
-				<b>0.0</b>
-			</color>
-			<position>
-				<x>3.5</x>
-				<y>0</y>
-				<z>20</z>
-			</position>
-			<rotation>
-				<x>0</x>
-				<y>0</y>
-				<z>0</z>
-			</rotation>
-			<scale>
-				<x>1.0</x>
-				<y>1.0</y>
-				<z>1.0</z>
-			</scale>
-			<!--
-			Exemple de alte configurari care vor fi adaugate si parsate mai tarziu (pentru taskuri ulterioare)
-			<followingCamera>
-				<cameras>
-					<camera>1</camera>
-				</cameras>
-				<ox/>
-				<oy/>
-				<oz/>
-			</followingCamera>
-			<trajectory type="linear" iteration="infinite" direction="alternate">
-				<comment>startPoint e chiar Pos</comment>
-				<endPoint>
-					<x>0.5</x>
-					<y>100.0</y>
-					<z>1.0</z>				
-				</endPoint>
-				<speed>0.1</speed>
-			</trajectory>
-			<lights>
-				<light>1</light>
-			</lights>
-			-->
-		</object>
+		 
 		
-		<object id="8">
+		<!-- <object id="8">
 			<model>generated</model>
 			<shader>8</shader>
 			<type>terrain</type>
@@ -187,7 +137,7 @@
 			<textures>
 				<texture id="14"/>
 				<texture id="15"/>
-				<!-- TO DO adaugati texturile-->
+				
 			</textures>
 			<position>
 				<x>1.5</x>
@@ -205,6 +155,7 @@
 				<z>1.0</z>
 			</scale>
 		</object>
+		-->
 	</objects>
 	
 	<!--

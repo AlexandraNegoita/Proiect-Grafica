@@ -10,12 +10,12 @@ Shader::Shader(ShaderResource* sr) {
 int Shader::Init()
 {
 
-	vertexShader = esLoadShader(GL_VERTEX_SHADER, Shader::sr->vs_path);
+	vertexShader = esLoadShader(GL_VERTEX_SHADER, this->sr->vs_path);
 
 	if (vertexShader == 0)
 		return -1;
 
-	fragmentShader = esLoadShader(GL_FRAGMENT_SHADER, Shader::sr->fs_path);
+	fragmentShader = esLoadShader(GL_FRAGMENT_SHADER, this->sr->fs_path);
 
 	if (fragmentShader == 0)
 	{

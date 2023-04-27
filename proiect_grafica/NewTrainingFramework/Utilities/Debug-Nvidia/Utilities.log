@@ -3,31 +3,31 @@
 cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
   TGA.cpp
   Math.cpp
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(10,13): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(104,13): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(208,13): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(340,54): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(341,54): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(342,54): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(343,12): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(343,28): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(343,44): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(343,60): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(632,9): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(10,13): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(104,13): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(208,13): warning C4244: 'return': conversion from 'double' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(340,54): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(341,54): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(342,54): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(343,12): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(343,28): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(343,44): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(343,60): warning C4244: '=': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\Math.cpp(632,9): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
   esUtil_win.cpp
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(53,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(54,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(62,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(63,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(71,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(72,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(81,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(82,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(90,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(91,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(99,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(100,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(53,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(54,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(62,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(63,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(71,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(72,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(81,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(82,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(90,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(91,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(99,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\esUtil_win.cpp(100,24): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   esUtil.cpp
   esShader.cpp
   Generating Code...
-  Utilities.vcxproj -> D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\BIN-Nvidia\Utilities.lib
+  Utilities.vcxproj -> D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\BIN-Nvidia\Utilities.lib

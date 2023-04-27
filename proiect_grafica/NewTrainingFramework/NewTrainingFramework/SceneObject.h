@@ -3,6 +3,7 @@
 #include "Vertex.h"
 #include "../Utilities/utilities.h"
 #include "Texture.h"
+#include "Camera.h"
 
 
 class SceneObject {
@@ -13,6 +14,7 @@ public:
 	char* name;
 	bool isWired;
 	int* texturesId;
+	int texturesIdLength;
 	Vector3 position;
 	Vector3 rotation;
 	Vector3 scale;
@@ -21,10 +23,12 @@ public:
 
 	Model* model;
 	Shader* shader;
-	Texture** textures;
+	static std::map<int, Texture*> textures;
+	//Texture** textures = new Texture[sizeof(texturesId)];
 
 	void Load();
 	void Init();
+	void Update();
 	void Draw();
 
 	SceneObject();

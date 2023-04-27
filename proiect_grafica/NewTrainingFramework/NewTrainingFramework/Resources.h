@@ -8,7 +8,7 @@ struct ModelResource {
 };
 struct ShaderResource {
 	int shaderId;
-	char* path;
+	// char* path;
 	char* vs_path;
 	char* fs_path;
 	bool isLoaded;

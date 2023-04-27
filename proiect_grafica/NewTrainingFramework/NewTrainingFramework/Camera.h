@@ -4,19 +4,23 @@
 
 class Camera
 {
-private:
+public:
 	char* type;
 	
 	Vector3 position, target;
 	Vector3 up;
 	GLfloat translationSpeed = 40.0f, rotationSpeed = 0.7f;
 	GLfloat nearC = 0.02f, farC = 2000.0f ,fov = 0.25f;
+
+	GLfloat currentTime = 0;
+	GLfloat maxTime = 0.05;
 	GLfloat deltaTime = 0.05f;
+
 	Vector3 zAxis;
 	Vector3 yAxis;
 	Vector3 xAxis;
 	Matrix viewMatrix, worldMatrix, perspectiveMatrix;
-public:
+
 	// constructors 
 	Camera();
 	Camera(Vector3 position, Vector3 target, Vector3 up);

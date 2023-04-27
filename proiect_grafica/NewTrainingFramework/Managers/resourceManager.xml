@@ -22,8 +22,8 @@
 	<shaders>
 		<folder path="Resources/Shaders/">
 			<shader id="10">
-				<vs>modelShader.vs</vs>
-				<fs>modelShader.fs</fs>
+				<vs>TriangleShaderVS.vs</vs>
+				<fs>TriangleShaderFS.fs</fs>
 			</shader>
 			<!-- <shader id="3">
 				<vs>terrainShader.vs</vs>

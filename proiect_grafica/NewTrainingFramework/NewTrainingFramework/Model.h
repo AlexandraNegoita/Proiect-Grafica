@@ -1,9 +1,8 @@
 #pragma once
 #include "stdafx.h"
-#include "../Utilities/utilities.h"
-
 #include "Resources.h"
 #include "Vertex.h"
+#include "../Utilities/utilities.h"
 
 
 
@@ -15,7 +14,7 @@ public:
 	GLuint nrIndices, nrVertices, nrIndicesWired;
 	Vertex* verticesData;
 	unsigned short* indices;
-	Model(ModelResource* mr);
+	Model::Model(ModelResource* mr);
 	void Init();
 	void Load();
 	void freeModel();
