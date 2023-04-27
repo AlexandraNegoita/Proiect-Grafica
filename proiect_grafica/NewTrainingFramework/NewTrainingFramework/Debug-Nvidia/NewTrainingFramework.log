@@ -1,49 +1,64 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  stdafx.cpp
+cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  Texture.cpp
+  TerrainObject.cpp
+  Camera.cpp
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Camera.cpp(123,28): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Camera.cpp(129,28): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Camera.cpp(135,28): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+  Shader.cpp
+  SceneObject.cpp
   SceneManager.cpp
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(102,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(103,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(104,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(105,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(125,171): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(125,103): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(125,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(130,167): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(130,101): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(130,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(135,159): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(135,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(135,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(140,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(141,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(142,22): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(143,23): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(144,22): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(124,171): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(124,103): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(124,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(129,167): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(129,101): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(129,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(134,159): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(134,97): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(134,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(139,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(140,32): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(141,22): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(142,23): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(143,22): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(185,31): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(186,31): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(187,31): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(188,31): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(189,31): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(190,31): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(191,31): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(192,31): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(193,28): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(194,28): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(195,28): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(196,28): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(198,32): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(199,32): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
 D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(200,32): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(201,32): warning C4244: '=': conversion from 'double' to 'GLfloat', possible loss of data
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(85,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\rapidxml-1.13\rapidxml.hpp(420,38): error C2061: syntax error: identifier 'memory'
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\rapidxml-1.13\rapidxml.hpp(418): message : while compiling class template member function 'rapidxml::xml_node<Ch> *rapidxml::memory_pool<Ch>::allocate_node(rapidxml::node_type,const Ch *,const Ch *,size_t,size_t)'
-          with
-          [
-              Ch=char
-          ]
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\rapidxml-1.13\rapidxml.hpp(2040): message : see reference to function template instantiation 'rapidxml::xml_node<Ch> *rapidxml::memory_pool<Ch>::allocate_node(rapidxml::node_type,const Ch *,const Ch *,size_t,size_t)' being compiled
-          with
-          [
-              Ch=char
-          ]
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\Utilities\rapidxml-1.13\rapidxml.hpp(1359): message : see reference to class template instantiation 'rapidxml::memory_pool<Ch>' being compiled
-          with
-          [
-              Ch=char
-          ]
-D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(73): message : see reference to class template instantiation 'rapidxml::xml_document<char>' being compiled
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\SceneManager.cpp(84,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  ResourceManager.cpp
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(206,34): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(225,33): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(226,33): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(242,36): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  NewTrainingFramework.cpp
+  Model.h
+  Model.cpp
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Model.cpp(14,14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Model.cpp(20,12): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Model.cpp(28,14): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Model.cpp(41,13): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Model.cpp(48,14): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Control.cpp
+  Generating Code...
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(147): warning C4715: 'ResourceManager::loadTexture': not all control paths return a value
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\ResourceManager.cpp(184): warning C4715: 'ResourceManager::loadShader': not all control paths return a value
+Control.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+Debug-Nvidia\Model.obj : warning LNK4042: object specified more than once; extras ignored
+SceneObject.obj : error LNK2019: unresolved external symbol "public: void __thiscall Model::Init(void)" (?Init@Model@@QAEXXZ) referenced in function "public: void __thiscall SceneObject::Init(void)" (?Init@SceneObject@@QAEXXZ)
+SceneObject.obj : error LNK2019: unresolved external symbol "public: class Model * __thiscall ResourceManager::loadModel(int)" (?loadModel@ResourceManager@@QAEPAVModel@@H@Z) referenced in function "public: void __thiscall SceneObject::Load(void)" (?Load@SceneObject@@QAEXXZ)
+D:\Documents\GitHub\Proiect-Grafica\proiect_grafica\NewTrainingFramework\\BIN-Nvidia\NewTrainingFramework.exe : fatal error LNK1120: 2 unresolved externals
