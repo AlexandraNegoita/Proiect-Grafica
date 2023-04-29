@@ -50,21 +50,21 @@
 			<comment>elemntul type este folosit doar in taskul optional cu tipurile de Camera </comment>
 			<type>firstPerson</type>
 			<position>
-				<x>0</x>
-				<y>0</y>
-				<z>-800</z>
-			</position>
-			<target>
-				<x>0</x>
-				<y>0</y>
-				<z>1</z>
-			</target>
-			<up>
-				<x>0</x>
-				<y>1</y>
-				<z>0</z>
-			</up>
-			<translationSpeed>10</translationSpeed>
+                <x>0</x>
+                <y>4</y>
+                <z>-100</z>
+            </position>
+            <target>
+                <x>0</x>
+                <y>0</y>
+                <z>1</z>
+            </target>
+            <up>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </up>
+			<translationSpeed>50</translationSpeed>
 			<rotationSpeed>0.3</rotationSpeed>
 			<fov>45</fov>
 			<near>0.2</near>
@@ -89,14 +89,15 @@
 				<texture id="4"/>
 			</textures>
 			<position>
-                <x>0</x>
-                <y>-10</y>
-                <z>10</z>
+                <!-- translatia -->
+                <x>-5</x>
+                <y>0</y>
+                <z>-10</z>
             </position>
             <rotation>
                 <x>0</x>
                 <y>0</y>
-                <z>10</z>
+                <z>0</z>
             </rotation>
             <scale>
                 <x>.05</x>
@@ -127,7 +128,104 @@
 			</lights>
 			-->
 		</object>
-		 
+		<object id="3">
+			
+			<model>1</model>
+			<shader>10</shader>
+			<type>normal</type>
+			<name>Crocodil_verde</name>
+			<textures>
+				<texture id="4"/>
+			</textures>
+			<position>
+                <!-- translatia -->
+                <x>5</x>
+                <y>0</y>
+                <z>-20</z>
+            </position>
+            <rotation>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+            </rotation>
+            <scale>
+                <x>.05</x>
+                <y>.05</y>
+                <z>.05</z>
+            </scale>
+			<!--
+			Exemple de alte configurari care vor fi adaugate si parsate mai tarziu (pentru taskuri ulterioare)
+			<followingCamera>
+				<cameras>
+					<camera>1</camera>
+				</cameras>
+				<ox/>
+				<oy/>
+				<oz/>
+			</followingCamera>
+			<trajectory type="linear" iteration="infinite" direction="alternate">
+				<comment>startPoint e chiar Pos</comment>
+				<endPoint>
+					<x>0.5</x>
+					<y>100.0</y>
+					<z>1.0</z>				
+				</endPoint>
+				<speed>0.1</speed>
+			</trajectory>
+			<lights>
+				<light>1</light>
+			</lights>
+			-->
+		</object>
+		<object id="4">
+			
+			<model>2</model>
+			<shader>10</shader>
+			<type>normal</type>
+			<name>Autobuz</name>
+			<textures>
+				<texture id="5"/>
+			</textures>
+			<position>
+                <!-- translatia -->
+                <x>10</x>
+                <y>0</y>
+                <z>-10</z>
+            </position>
+            <rotation>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+            </rotation>
+            <scale>
+                <x>.05</x>
+                <y>.05</y>
+                <z>.05</z>
+            </scale>
+			<!--
+			Exemple de alte configurari care vor fi adaugate si parsate mai tarziu (pentru taskuri ulterioare)
+			<followingCamera>
+				<cameras>
+					<camera>1</camera>
+				</cameras>
+				<ox/>
+				<oy/>
+				<oz/>
+			</followingCamera>
+			<trajectory type="linear" iteration="infinite" direction="alternate">
+				<comment>startPoint e chiar Pos</comment>
+				<endPoint>
+					<x>0.5</x>
+					<y>100.0</y>
+					<z>1.0</z>				
+				</endPoint>
+				<speed>0.1</speed>
+			</trajectory>
+			<lights>
+				<light>1</light>
+			</lights>
+			-->
+		</object>
 		
 		<!-- <object id="8">
 			<model>generated</model>

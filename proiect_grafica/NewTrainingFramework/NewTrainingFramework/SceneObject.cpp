@@ -69,7 +69,21 @@ void SceneObject::Draw() {
 		it++;
 		i++;
 	}  
-	//err = glGetError();
+	// err = glGetError();
+
+	Camera* c = SceneManager::getInstance()->getActiveCamera();
+	Matrix cameraView = c->getViewMatrix();
+	Matrix cameraPerspective = c->getPerspectiveMatrix();
+	Matrix Rx, Ry, Rz, T, S;
+	Rx.SetRotationX(rotation.x);
+	Ry.SetRotationY(rotation.y);
+	Rz.SetRotationZ(rotation.z);
+	S.SetScale(scale);
+	T.SetTranslation(position);
+
+	Matrix M = S * Rx * Ry * Rz * T;
+
+	Matrix  MVP(M * cameraView * cameraPerspective);
 	
 	if (shader->positionAttribute != -1)
 	{
@@ -106,16 +120,18 @@ void SceneObject::Draw() {
 		glEnableVertexAttribArray(shader->uvAttribute);
 		glVertexAttribPointer(shader->uvAttribute, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(5 * sizeof(Vector3)));
 	}
-	Camera* c = SceneManager::getInstance()->getActiveCamera();
-	Matrix cameraView = c->getViewMatrix();
-	if (shader->viewUniform != -1)
+	
+	/*if (shader->viewUniform != -1)
 	{
 		glUniformMatrix4fv(shader->viewUniform, 1, GL_FALSE, (GLfloat*)cameraView.m);
 	}
-	Matrix cameraPerspective = c->getPerspectiveMatrix();
+	
 	if (shader->perspectiveUniform != -1)
 	{
 		glUniformMatrix4fv(shader->perspectiveUniform, 1, GL_FALSE, (GLfloat*)cameraPerspective.m);
+	}*/
+	if (shader->modelUniform != -1) {
+		glUniformMatrix4fv(shader->modelUniform, 1, GL_FALSE, (GLfloat*)MVP.m);
 	}
 	/*if (shader->uvAttribute != -1) {
 		glUniform1i(shader->textureUniform, 0);

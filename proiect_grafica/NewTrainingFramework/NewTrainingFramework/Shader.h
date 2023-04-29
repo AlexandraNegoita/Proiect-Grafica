@@ -13,6 +13,7 @@ public:
 	GLint uvAttribute;
 	GLint viewUniform;
 	GLint textureUniform;
+	GLint modelUniform;
 	GLint perspectiveUniform;
 	GLint colorAttribute;
 	GLint matrixUniform;

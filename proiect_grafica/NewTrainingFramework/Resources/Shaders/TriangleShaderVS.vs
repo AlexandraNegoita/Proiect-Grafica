@@ -8,10 +8,14 @@ uniform mat4 u_persp;
 attribute vec2 a_uv;
 varying vec2 v_uv;
 
+uniform mat4 u_model;
+
 void main()
 {
 	vec4 posL = vec4(a_posL, 1.0);
+
 	v_uv = a_uv;
-	gl_Position = u_persp * u_view * posL;
+
+	gl_Position = u_model * posL;
 }
    

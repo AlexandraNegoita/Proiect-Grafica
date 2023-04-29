@@ -255,12 +255,12 @@ void Key ( ESContext *esContext, unsigned char key, bool bIsPressed)
 
 	switch (key) {
 		case 'W': case 'w': {
-			c->moveOy(1);
+			c->moveOz(-1);
 			c->updateWorldView();
 			break;
 		}
 		case 'S': case 's': {
-			c->moveOy(-1);
+			c->moveOz(1);
 			c->updateWorldView(); 
 			break;
 		}
@@ -275,12 +275,12 @@ void Key ( ESContext *esContext, unsigned char key, bool bIsPressed)
 			break;
 		}
 		case 'Z': case 'z': {
-			c->moveOz(1);
+			c->moveOy(1);
 			c->updateWorldView();
 			break;
 		}
 		case 'X': case 'x': {
-			c->moveOz(-1);
+			c->moveOy(-1);
 			c->updateWorldView();
 			break;
 		}
@@ -333,7 +333,9 @@ void Key ( ESContext *esContext, unsigned char key, bool bIsPressed)
 
 void Mouse(ESContext* esContext, int LeftRightClick, bool isDoubleClick, bool isPressed, float coordX, float coordY)//left/right button, click/dublu-click, isPressed, coordX, coordY
 {
-	/*char* type;
+	Camera* c = SceneManager::getInstance()->getActiveCamera();
+
+	char* type;
 	if (LeftRightClick) {
 		type = "right";
 	} else {
@@ -342,20 +344,20 @@ void Mouse(ESContext* esContext, int LeftRightClick, bool isDoubleClick, bool is
 	GLint screenWidth = Globals::screenWidth;
 	GLint screenHeight = Globals::screenHeight;
 	if (coordX > 0 && coordX < screenWidth * 0.25f) {
-		camera.rotateOy(1);
-		camera.updateWorldView();
+		c->rotateOy(1);
+		c->updateWorldView();
 	} else if (coordX > screenWidth * 0.75f && coordX < screenWidth) {
-		camera.rotateOy(-1);
-		camera.updateWorldView();
+		c->rotateOy(-1);
+		c->updateWorldView();
 	}
 	if (coordY > 0 && coordY < screenHeight * 0.25f) {
-		camera.rotateOx(1);
-		camera.updateWorldView();
+		c->rotateOx(1);
+		c->updateWorldView();
 	} else if (coordY > screenHeight * 0.75f && coordY < screenHeight) {
-		camera.rotateOx(-1);
-		camera.updateWorldView();
+		c->rotateOx(-1);
+		c->updateWorldView();
 	}
-	std::cout << "Type: " << type << "\tIs Double-click: " << isDoubleClick << "\tIs pressed: " << isPressed << "\nCoords: X:" << coordX << "\tY:" << coordY<<"\n";*/
+	/* std::cout << "Type: " << type << "\tIs Double-click: " << isDoubleClick << "\tIs pressed: " << isPressed << "\nCoords: X:" << coordX << "\tY:" << coordY << "\n"; */
 }
 
 void CleanUp()
@@ -385,7 +387,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	esRegisterDrawFunc ( &esContext, Draw );
 	esRegisterUpdateFunc ( &esContext, Update );
 	esRegisterKeyFunc ( &esContext, Key);
-//	esRegisterMouseFunc(&esContext, Mouse);
+	esRegisterMouseFunc(&esContext, Mouse);
 
 	esMainLoop ( &esContext );
 

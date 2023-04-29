@@ -70,6 +70,7 @@ Model* ResourceManager::loadModel(int modelId) {
             Model* m = new Model(it->second);
             m->Load();
             m->Init();
+            it->second->isLoaded = true;
             Model::loadedModels.insert(std::pair<int, Model*>(it->second->modelId, m));
             return m;
         }

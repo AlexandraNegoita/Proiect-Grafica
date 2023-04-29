@@ -1,7 +1,11 @@
 ﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  Camera.cpp
+  Shader.cpp
+  SceneObject.cpp
 D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Camera.h(16,10): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Camera.cpp(123,28): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Camera.cpp(129,28): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
-D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\NewTrainingFramework\Camera.cpp(135,28): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  TerrainObject.cpp
+  SceneManager.cpp
+  ResourceManager.cpp
+  NewTrainingFramework.cpp
   NewTrainingFramework.vcxproj -> D:\grafica\Proiect-Grafica\proiect_grafica\NewTrainingFramework\BIN-Nvidia\NewTrainingFramework.exe

@@ -39,6 +39,8 @@ int Shader::Init()
 
 	uvAttribute = glGetAttribLocation(program, "a_uv");
 	textureUniform = glGetUniformLocation(program, "u_texture");
+
+	modelUniform = glGetUniformLocation(program, "u_model");
 	return 0;
 }
 

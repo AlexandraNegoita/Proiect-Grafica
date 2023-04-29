@@ -5,6 +5,9 @@
 			<model id="1">
 				<file>Croco.nfg</file>
 			</model>
+			<model id="2">
+				<file>bus.nfg</file>
+			</model>
 			<model id="5">
 				<file>Bila.nfg</file>
 			</model>
@@ -36,7 +39,7 @@
 	<textures>
 		<folder path="Resources/Textures/">
 			<texture id="4" type="2d">
-				<file>croco.tga</file>			
+				<file>Croco_new.tga</file>			
 				<min_filter>LINEAR</min_filter>
 				<mag_filter>LINEAR</mag_filter>
 				<wrap_s>CLAMP_TO_EDGE</wrap_s>
@@ -57,7 +60,7 @@
 				<wrap_t>CLAMP_TO_EDGE</wrap_t>
 			</texture>		
 			<texture id="5" type="2d">
-				<file>bus.tga</file>
+				<file>Bus.tga</file>
 				<min_filter>LINEAR</min_filter>
 				<mag_filter>LINEAR</mag_filter>
 				<wrap_s>CLAMP_TO_EDGE</wrap_s>
