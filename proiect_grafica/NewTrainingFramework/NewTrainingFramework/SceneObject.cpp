@@ -54,21 +54,20 @@ void SceneObject::Draw() {
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, model->iboId);
 	//err = glGetError();
 	// glActiveTexture(GL_TEXTURE0);
-	int i = 0;
 	/*for (int i = 0; i < sizeof(texturesId) / sizeof(int); i++) {
 		glBindTexture(GL_TEXTURE_2D, (*textures[i]).tId);
 	}*/
 
-	std::map<int, Texture*>::iterator it = textures.begin();
-	while (it != textures.end()) {
+	std::map<int, Texture*>::iterator it;
+
+	for (int i = 0; i < texturesIdLength; i++) {
+		it = textures.find(texturesId[i]);
 		glActiveTexture(GL_TEXTURE0 + i);
 		glBindTexture(GL_TEXTURE_2D, (it->second)->tId);
 		if (shader->textureUniform != -1) {
 			glUniform1i(shader->textureUniform, i);
 		}
-		it++;
-		i++;
-	}  
+	}
 	// err = glGetError();
 
 	Camera* c = SceneManager::getInstance()->getActiveCamera();

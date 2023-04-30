@@ -100,14 +100,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Resources\Shaders\TriangleShaderFS.fs">
+    <None Include="..\Resources\Shaders\CrocoShaderFS.fs">
       <Filter>Resources\Shaders</Filter>
     </None>
-    <None Include="..\Resources\Shaders\TriangleShaderVS.vs">
+    <None Include="..\Resources\Shaders\CrocoShaderVS.vs">
       <Filter>Resources\Shaders</Filter>
     </None>
     <None Include="..\..\Readme.doc" />
     <None Include="NewTrainingFramework.vcproj" />
     <None Include="pcviewer_es2.cfg" />
+    <None Include="BusShaderFS.fs" />
+    <None Include="BusShaderVS.vs" />
   </ItemGroup>
 </Project>

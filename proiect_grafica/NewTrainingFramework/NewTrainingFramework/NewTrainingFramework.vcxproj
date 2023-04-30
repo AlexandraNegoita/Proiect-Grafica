@@ -196,9 +196,11 @@
     <ClInclude Include="Vertex.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Resources\Shaders\TriangleShaderFS.fs" />
-    <None Include="..\Resources\Shaders\TriangleShaderVS.vs" />
+    <None Include="..\Resources\Shaders\CrocoShaderFS.fs" />
+    <None Include="..\Resources\Shaders\CrocoShaderVS.vs" />
     <None Include="..\..\Readme.doc" />
+    <None Include="BusShaderFS.fs" />
+    <None Include="BusShaderVS.vs" />
     <None Include="NewTrainingFramework.vcproj" />
     <None Include="pcviewer_es2.cfg" />
   </ItemGroup>

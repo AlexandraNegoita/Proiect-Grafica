@@ -180,7 +180,7 @@
 		<object id="4">
 			
 			<model>2</model>
-			<shader>10</shader>
+			<shader>11</shader>
 			<type>normal</type>
 			<name>Autobuz</name>
 			<textures>
